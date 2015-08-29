@@ -1,0 +1,14 @@
+{
+  "name": "temp",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "Photo-Sphere-Viewer": "~3.0.1",
+    "three.js": "~0.71.0"
+  },
+  "devDependencies": {
+    "chai": "~3.2.0",
+    "mocha": "~2.2.5"
+  }
+}
