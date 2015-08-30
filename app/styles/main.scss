@@ -1,40 +1,42 @@
 // bower:scss
 // endbower
 
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-}
+
 
 .browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    margin: 0.2rem 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
-#gallery img {
-  height: 100px;
-  width: 100px;
+// Set the size of the image.
+.photo-viewer {
+    $width: 600px;
+
+    min-height: 400px;
+
+    &-container {
+        width: $width;
+    }
+    & img {
+        // height: $width;
+        width: $width;
+    }
 }
 
-#photo-viewer,
-#photo-viewer img {
-  height: 500px;
-  width: 500px;
-}
+// Position the selectable icon in the upper right
+.photo-viewer {
+    $size: 50px;
 
-#photo-viewer {
     position: relative;
 
-    img.photo-sphere {
+    & img.photo-sphere-icon {
         position: absolute;
         cursor: pointer;
         top: 10px;
         right: 15px;
-        height: 50px;
-        width: 50px;
-        opacity: 0.5;
+        height: $size;
+        width: $size;
     }
 }
