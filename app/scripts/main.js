@@ -44,7 +44,7 @@
 
         checkIsPhotoSphere(img, function (isPhotoSphere) {
             if (!isPhotoSphere) {
-                $imageTitle.append('<small class="pull-right">This has no "GPano" data.</small>')
+                $imageTitle.append('<small class="pull-right">This has no "GPano" data.</small>');
                 return;
             }
 
@@ -58,7 +58,7 @@
                 });
             });
 
-            $imageTitle.append('<small class="pull-right">Click the icon to go 3D!</small>')
+            $imageTitle.append('<small class="pull-right">Click the icon to go 3D!</small>');
             $container.append($sphere);
         });
     };
