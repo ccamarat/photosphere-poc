@@ -27,7 +27,7 @@
         };
 
         xhr.open('GET', img.src, true);
-        xhr.send(null);
+        xhr.send();
     };
 
     var showImage = function (img) {
@@ -35,6 +35,7 @@
             img = this;
         }
         var $img = $(img).clone();
+        $img.attr('src', $img.attr('src').replace('.thumb', ''));
 
         $imageTitle.text(img.src.substring(img.src.lastIndexOf('/') + 1));
         $container
@@ -42,7 +43,7 @@
             .removeClass('psv-container')
             .append($img);
 
-        checkIsPhotoSphere(img, function (isPhotoSphere) {
+        checkIsPhotoSphere($img[0], function (isPhotoSphere) {
             if (!isPhotoSphere) {
                 $imageTitle.append('<small class="pull-right">This has no "GPano" data.</small>');
                 return;
@@ -54,7 +55,7 @@
                 $container.empty();
                 createPhotoSphereViewer({
                     container: $container[0],
-                    panorama: img.src
+                    panorama: $img.attr('src')
                 });
             });
 
