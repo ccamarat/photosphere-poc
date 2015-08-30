@@ -1,5 +1,5 @@
 # photosphere-poc
-Photo Sphere Proof of Concept for [ShareBy](https://share.storycloud.co)'s Image Viewer. It detects whether an image
+Photo Sphere Proof of Concept for [ShareBy](https://share.storycloud.com)'s Image Viewer. It detects whether an image
 has GPano data and indicates that the image can be shown in 3d. The detection requires no third-party libs and
 can be integrated right-in to the current image viewer. If the user desires, we will load mistic100's
 [Photo-Sphere-Viewer](https://github.com/mistic100/Photo-Sphere-Viewer) to do the heavy-lifting.
